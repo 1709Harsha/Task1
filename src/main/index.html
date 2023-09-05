@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Include necessary styles and scripts -->
+</head>
+<body>
+    <table>
+        <tr th:each="Tdto : ${items}">
+            <td th:text="${Tdto.id}"></td>
+            <td th:text="${Tdto.name}"></td>
+            <td th:text="${Tdto.price}"></td>
+            <td><a th:href="@{/edit/{id}(id=${item.id})}" class="edit-btn">Edit</a></td>
+            <td><a th:href="@{/delete/{id}(id=${item.id})}" class="delete-btn">Delete</a></td>
+        </tr>
+    </table>
+    
+</body>
+</html>
